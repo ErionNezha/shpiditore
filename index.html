@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="UTF-8">
+<!-- Created by Erion Nezha — © 2026 All rights reserved -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShpiDitore — Qera ditore deri në 5000 lekë — GitHub</title>
+<style>
+:root{--bg:#070b16;--panel:#0d1426;--line:rgba(120,140,200,.16);--txt:#e9edf5;--mut:#93a0b8;--acc:#C0563A;}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--txt);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding:32px 20px 60px}
+header.hero{text-align:center;padding:44px 20px 30px}
+.hero h1{font-size:clamp(1.8rem,4.5vw,2.8rem);letter-spacing:-.02em}
+.hero h1 .dot{color:var(--acc)}
+.hero p{color:var(--mut);max-width:640px;margin:12px auto 0}
+.badges{display:flex;gap:10px;justify-content:center;margin-top:18px;flex-wrap:wrap}
+.badge{font-size:.8rem;padding:6px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.03)}
+.badge b{color:var(--acc)}
+section{margin-top:44px}
+h2{font-size:1.25rem;margin-bottom:6px}
+h2 .dot{color:var(--acc)}
+.sub{color:var(--mut);font-size:.95rem;margin-bottom:16px}
+.demo-frame{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#000;box-shadow:0 30px 80px -30px rgba(0,0,0,.7)}
+.demo-frame iframe{width:100%;height:82vh;border:0;display:block;background:#000}
+.open-new{display:inline-block;margin-top:14px;color:var(--acc);text-decoration:none;font-weight:600;font-size:.95rem}
+.open-new:hover{text-decoration:underline}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:-1px}
+.tab{background:var(--panel);border:1px solid var(--line);border-bottom:0;color:var(--mut);
+     padding:10px 18px;border-radius:10px 10px 0 0;cursor:pointer;font-size:.9rem;font-family:ui-monospace,Menlo,Consolas,monospace}
+.tab.active{color:var(--txt);background:#111a30;border-color:var(--acc)}
+.tab.active b{color:var(--acc)}
+.codebox{border:1px solid var(--line);border-radius:0 12px 12px 12px;background:#0a0f1e;position:relative}
+.codebox pre{margin:0;padding:20px;overflow:auto;max-height:640px;font-size:.82rem;line-height:1.55;
+             font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre}
+.codebox code{color:#cdd6ea}
+.copybtn{position:absolute;top:10px;right:10px;background:#16213c;border:1px solid var(--line);color:var(--txt);
+         border-radius:8px;padding:6px 12px;font-size:.78rem;cursor:pointer}
+.copybtn:hover{border-color:var(--acc)}
+.codepane{display:none}.codepane.active{display:block}
+.tk-cmt{color:#5b6b8c;font-style:italic}.tk-str{color:#8ce99a}.tk-kw{color:#c792ea}
+.tk-tag{color:#7dd3fc}.tk-attr{color:#fbbf24}.tk-at{color:#f472b6}.tk-num{color:#fb923c}
+footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--line);text-align:center;color:var(--mut);font-size:.9rem}
+footer strong{color:var(--txt)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+<h1>ShpiDitore <span class="dot">—</span> Qera ditore</h1>
+<p>Shpi me qera ditore deri në 5000 lekë/nata — 100% falas, pa komision. Tiranë, Durrës, Elbasan.</p>
+<div class="badges"><span class="badge"><b>●</b> Demo Live</span><span class="badge"><b>{ }</b> Kodi Burim</span><span class="badge">GitHub Pages</span></div>
+</header>
+
+<section>
+<h2><span class="dot">▸</span> Demo Live</h2>
+<p class="sub">Kërko qytetin, filtro çmimin, kontakto pronarin direkt.</p>
+<div class="demo-frame"><iframe src="demo/" title="Demo Live" loading="lazy"></iframe></div>
+<a class="open-new" href="demo/" target="_blank" rel="noopener">Hape demo-n në tab të ri ↗</a>
+</section>
+
+<section>
+<h2><span class="dot">▸</span> Kodi Burim</h2>
+<p class="sub">Kodi i plotë i projektit, i lexueshëm direkt këtu.</p>
+<div class="tabs"><button class="tab active" data-f="f0"><b>●</b> demo/index.html</button>
+<button class="tab" data-f="f1"><b>●</b> src/App.jsx</button>
+<button class="tab" data-f="f2"><b>●</b> src/data/listings.js</button>
+<button class="tab" data-f="f3"><b>●</b> src/styles.css</button></div>
+<div class="codepane active" id="pane-f0"><div class="codebox"><button class="copybtn">Kopjo</button><pre><code>&lt;!doctype html&gt;
+<span class="tk-cmt">&lt;!-- Created by Erion Nezha — © 2026 All rights reserved --&gt;</span>
+&lt;<span class="tk-tag">html</span> <span class="tk-attr">lang</span>=<span class="tk-str">&quot;sq&quot;</span>&gt;
+  &lt;<span class="tk-tag">head</span>&gt;
+    &lt;<span class="tk-tag">meta</span> <span class="tk-attr">charset</span>=<span class="tk-str">&quot;UTF-8&quot;</span> /&gt;
+    &lt;<span class="tk-tag">meta</span> <span class="tk-attr">name</span>=<span class="tk-str">&quot;viewport&quot;</span> <span class="tk-attr">content</span>=<span class="tk-str">&quot;width=device-width, initial-scale=1.0, viewport-fit=cover&quot;</span> /&gt;
+    &lt;<span class="tk-tag">title</span>&gt;ShpiDitore — Shpi me qera ditore deri në 5000 lekë, pa komision&lt;/<span class="tk-tag">title</span>&gt;
+    &lt;<span class="tk-tag">meta</span> <span class="tk-attr">name</span>=<span class="tk-str">&quot;description&quot;</span> <span class="tk-attr">content</span>=<span class="tk-str">&quot;Gjej shpi me qera ditore në Tiranë, Durrës dhe Elbasan — deri në 5000 lekë nata, 100% falas, pa komision. Kontakt direkt me pronarin.&quot;</span> /&gt;
+    &lt;<span class="tk-tag">meta</span> <span class="tk-attr">name</span>=<span class="tk-str">&quot;theme-color&quot;</span> <span class="tk-attr">content</span>=<span class="tk-str">&quot;#FAF5EC&quot;</span> /&gt;
+    &lt;<span class="tk-tag">link</span> <span class="tk-attr">rel</span>=<span class="tk-str">&quot;preconnect&quot;</span> <span class="tk-attr">href</span>=<span class="tk-str">&quot;https://fonts.googleapis.com&quot;</span> /&gt;
+    &lt;<span class="tk-tag">link</span> <span class="tk-attr">rel</span>=<span class="tk-str">&quot;preconnect&quot;</span> <span class="tk-attr">href</span>=<span class="tk-str">&quot;https://fonts.gstatic.com&quot;</span> crossorigin /&gt;
+    &lt;<span class="tk-tag">link</span> <span class="tk-attr">href</span>=<span class="tk-str">&quot;https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap&quot;</span> <span class="tk-attr">rel</span>=<span class="tk-str">&quot;stylesheet&quot;</span> /&gt;
+    &lt;<span class="tk-tag">link</span> <span class="tk-attr">rel</span>=<span class="tk-str">&quot;icon&quot;</span> <span class="tk-attr">type</span>=<span class="tk-str">&quot;image/svg+xml&quot;</span> <span class="tk-attr">href</span>=<span class="tk-str">&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 64 64&#x27;%3E%3Crect width=&#x27;64&#x27; height=&#x27;64&#x27; rx=&#x27;14&#x27; fill=&#x27;%23C0563A&#x27;/%3E%3Cpath d=&#x27;M32 14 14 30h5v18h10V36h6v12h10V30h5z&#x27; fill=&#x27;%23FAF5EC&#x27;/%3E%3Ccircle cx=&#x27;47&#x27; cy=&#x27;17&#x27; r=&#x27;6&#x27; fill=&#x27;%23F2B441&#x27;/%3E%3C/svg%3E&quot;</span> /&gt;
+    &lt;<span class="tk-tag">script</span> <span class="tk-attr">type</span>=<span class="tk-str">&quot;module&quot;</span> crossorigin <span class="tk-attr">src</span>=<span class="tk-str">&quot;./assets/index-BjP446-r.js&quot;</span>&gt;&lt;/<span class="tk-tag">script</span>&gt;
+    &lt;<span class="tk-tag">link</span> <span class="tk-attr">rel</span>=<span class="tk-str">&quot;stylesheet&quot;</span> crossorigin <span class="tk-attr">href</span>=<span class="tk-str">&quot;./assets/index-Dr-kuDmz.css&quot;</span>&gt;
+  &lt;/<span class="tk-tag">head</span>&gt;
+  &lt;<span class="tk-tag">body</span>&gt;
+    &lt;<span class="tk-tag">div</span> <span class="tk-attr">id</span>=<span class="tk-str">&quot;root&quot;</span>&gt;&lt;/<span class="tk-tag">div</span>&gt;
+  &lt;/<span class="tk-tag">body</span>&gt;
+&lt;/<span class="tk-tag">html</span>&gt;
+</code></pre></div></div>
+<div class="codepane" id="pane-f1"><div class="codebox"><button class="copybtn">Kopjo</button><pre><code>import React, { useEffect } from &#x27;react&#x27;;
+import { useRoute } from &#x27;./lib/router.js&#x27;;
+import { Header, Footer } from &#x27;./components/Chrome.jsx&#x27;;
+import { Home } from &#x27;./components/Home.jsx&#x27;;
+import { CityPage } from &#x27;./components/CityPage.jsx&#x27;;
+import { ListingDetail } from &#x27;./components/ListingDetail.jsx&#x27;;
+import { SubmitForm } from &#x27;./components/SubmitForm.jsx&#x27;;
+import { HowItWorks } from &#x27;./components/HowItWorks.jsx&#x27;;
+
+<span class="tk-cmt">/* Routing SPA me query-string (?p=...), si te ÇmimRadar:
+   ?p=home | ?p=qyteti&amp;c= | ?p=shpia&amp;id= | ?p=shto | ?p=si-funksionon */</span>
+export default <span class="tk-kw">function</span> App() {
+  <span class="tk-kw">const</span> route = useRoute();
+
+  <span class="tk-cmt">// RREGULL: scrollTo GJITHMONË me bllok — kurrë return implicit (thyen React-in).</span>
+  useEffect(() =&gt; { window.scrollTo(0, 0); }, [route.page, route.c, route.id]);
+
+  <span class="tk-kw">return</span> (
+    &lt;&gt;
+      &lt;Header /&gt;
+      &lt;main&gt;
+        {route.page === &#x27;home&#x27; &amp;&amp; &lt;Home /&gt;}
+        {route.page === &#x27;qyteti&#x27; &amp;&amp; &lt;CityPage city={route.c || &#x27;tirane&#x27;} /&gt;}
+        {route.page === &#x27;shpia&#x27; &amp;&amp; &lt;ListingDetail id={route.id} /&gt;}
+        {route.page === &#x27;shto&#x27; &amp;&amp; &lt;SubmitForm /&gt;}
+        {route.page === &#x27;si-funksionon&#x27; &amp;&amp; &lt;HowItWorks /&gt;}
+      &lt;/main&gt;
+      &lt;Footer /&gt;
+    &lt;/&gt;
+  );
+}
+</code></pre></div></div>
+<div class="codepane" id="pane-f2"><div class="codebox"><button class="copybtn">Kopjo</button><pre><code><span class="tk-cmt">/* ShpiDitore — njoftime SHEMBULL (demo: true).
+   Demo-njoftimet S&#x27;KANË numër telefoni (phone: null) — kontakti vjen nga pronari real.
+   Kurrë mos shpik numra telefoni këtu. */</span>
+export <span class="tk-kw">const</span> CITIES = [
+  { id: &#x27;tirane&#x27;, name: &#x27;Tiranë&#x27;, tagline: &#x27;Kryeqyteti plot jetë&#x27;, icon: &#x27;🏛️&#x27; },
+  { id: &#x27;durres&#x27;, name: &#x27;Durrës&#x27;, tagline: &#x27;Deti 30 minuta larg&#x27;, icon: &#x27;🌊&#x27; },
+  { id: &#x27;elbasan&#x27;, name: &#x27;Elbasan&#x27;, tagline: &#x27;Qetësi mes historisë&#x27;, icon: &#x27;🏰&#x27; },
+];
+
+export <span class="tk-kw">const</span> AMENITIES = [
+  { id: &#x27;wifi&#x27;, label: &#x27;WiFi&#x27; },
+  { id: &#x27;ac&#x27;, label: &#x27;Kondicioner&#x27; },
+  { id: &#x27;parking&#x27;, label: &#x27;Parking&#x27; },
+  { id: &#x27;kuzhine&#x27;, label: &#x27;Kuzhinë&#x27; },
+  { id: &#x27;lavatrice&#x27;, label: &#x27;Lavatriçe&#x27; },
+  { id: &#x27;ballkon&#x27;, label: &#x27;Ballkon&#x27; },
+  { id: &#x27;tv&#x27;, label: &#x27;TV&#x27; },
+  { id: &#x27;deti&#x27;, label: &#x27;Pamje deti&#x27; },
+];
+
+export <span class="tk-kw">const</span> TYPES = [
+  { id: &#x27;garsoniere&#x27;, label: &#x27;Garsoniere&#x27; },
+  { id: &#x27;1+1&#x27;, label: &#x27;1+1&#x27; },
+  { id: &#x27;2+1&#x27;, label: &#x27;2+1&#x27; },
+];
+
+export <span class="tk-kw">const</span> DEMO_LISTINGS = [
+  <span class="tk-cmt">// ——— TIRANË ———</span>
+  {
+    id: &#x27;demo-tr-1&#x27;, demo: <span class="tk-kw">true</span>, city: &#x27;tirane&#x27;, neighborhood: &#x27;Bllok&#x27;,
+    type: &#x27;1+1&#x27;, bedrooms: 1, price: 4500, phone: <span class="tk-kw">null</span>,
+    title: &#x27;Apartament 1+1 në zemër të Bllokut&#x27;,
+    description: &#x27;Apartament komod e i mobiluar plotësisht, 2 minuta nga qendra e Bllokut. Ideal për çifte ose udhëtarë pune — i qetë, i pastër, me dritë natyrale gjithë ditën.&#x27;,
+    amenities: [&#x27;wifi&#x27;, &#x27;ac&#x27;, &#x27;kuzhine&#x27;, &#x27;lavatrice&#x27;, &#x27;tv&#x27;], guests: 3,
+  },
+  {
+    id: &#x27;demo-tr-2&#x27;, demo: <span class="tk-kw">true</span>, city: &#x27;tirane&#x27;, neighborhood: &#x27;Kombinat&#x27;,
+    type: &#x27;garsoniere&#x27;, bedrooms: 1, price: 2500, phone: <span class="tk-kw">null</span>,
+    title: &#x27;Garsoniere ekonomike te Kombinati&#x27;,
+    description: &#x27;Zgjidhje e përkryer me buxhet: garsoniere e vogël por funksionale, pranë stacionit të autobusit. Çmimi më i mirë në Tiranë për qëndrim ditor.&#x27;,
+    amenities: [&#x27;wifi&#x27;, &#x27;kuzhine&#x27;, &#x27;tv&#x27;], guests: 2,
+  },
+  {
+    id: &#x27;demo-tr-3&#x27;, demo: <span class="tk-kw">true</span>, city: &#x27;tirane&#x27;, neighborhood: &#x27;Astir&#x27;,
+    type: &#x27;2+1&#x27;, bedrooms: 2, price: 5000, phone: <span class="tk-kw">null</span>,
+    title: &#x27;Apartament 2+1 familjar në Astir&#x27;,
+    description: &#x27;Hapësirë e madhe për familje deri në 5 persona. Dy dhoma gjumi, kuzhinë e pajisur, ballkon me pamje. Parking i lirë përpara pallatit.&#x27;,
+    amenities: [&#x27;wifi&#x27;, &#x27;ac&#x27;, &#x27;parking&#x27;, &#x27;kuzhine&#x27;, &#x27;lavatrice&#x27;, &#x27;ballkon&#x27;, &#x27;tv&#x27;], guests: 5,
+  },
+  {
+    id: &#x27;demo-tr-4&#x27;, demo: <span class="tk-kw">true</span>, city: &#x27;tirane&#x27;, neighborhood: &#x27;21 Dhjetori&#x27;,
+    type: &#x27;1+1&#x27;, bedrooms: 1, price: 3500, phone: <span class="tk-kw">null</span>,
+    title: &#x27;1+1 i rinovuar te 21 Dhjetori&#x27;,
+    description: &#x27;I rinovuar së fundmi me mobilje moderne. 10 minuta në këmbë nga Sheshi Skënderbej. Lagje e gjallë me kafene e dyqane poshtë pallatit.&#x27;,
+    amenities: [&#x27;wifi&#x27;, &#x27;ac&#x27;, &#x27;kuzhine&#x27;, &#x27;ballkon&#x27;, &#x27;tv&#x27;], guests: 3,
+  },
+  <span class="tk-cmt">// ——— DURRËS ———</span>
+  {
+    id: &#x27;demo-dr-1&#x27;, demo: <span class="tk-kw">true</span>, city: &#x27;durres&#x27;, neighborhood: &#x27;Plazh&#x27;,
+    type: &#x27;1+1&#x27;, bedrooms: 1, price: 4000, phone: <span class="tk-kw">null</span>,
+    title: &#x27;Apartament 1+1, 50m nga deti&#x27;,
+    description: &#x27;Zgjohu me zërin e dallgëve! Apartament i ndritshëm në vijë të parë të plazhit, me ballkon me pamje deti. Vera këtu është magji.&#x27;,
+    amenities: [&#x27;wifi&#x27;, &#x27;ac&#x27;, &#x27;kuzhine&#x27;, &#x27;ballkon&#x27;, &#x27;deti&#x27;, &#x27;tv&#x27;], guests: 4,
+  },
+  {
+    id: &#x27;demo-dr-2&#x27;, demo: <span class="tk-kw">true</span>, city: &#x27;durres&#x27;, neighborhood: &#x27;Currila&#x27;,
+    type: &#x27;garsoniere&#x27;, bedrooms: 1, price: 3000, phone: <span class="tk-kw">null</span>,
+    title: &#x27;Garsoniere buzë detit në Currila&#x27;,
+    description: &#x27;E vogël, e ëmbël, buzë detit. Currila është lagjja më e qetë e Durrësit për pushime — plazh i pastër dhe perëndime përrallore.&#x27;,
+    amenities: [&#x27;wifi&#x27;, &#x27;ac&#x27;, &#x27;deti&#x27;, &#x27;tv&#x27;], guests: 2,
+  },
+  {
+    id: &#x27;demo-dr-3&#x27;, demo: <span class="tk-kw">true</span>, city: &#x27;durres&#x27;, neighborhood: &#x27;Qendër&#x27;,
+    type: &#x27;2+1&#x27;, bedrooms: 2, price: 5000, phone: <span class="tk-kw">null</span>,
+    title: &#x27;Apartament 2+1 në qendër të Durrësit&#x27;,
+    description: &#x27;Për ata që duan qytetin: pranë shëtitores <span class="tk-str">&quot;Taulantia&quot;</span>, restoranteve dhe jetës së natës. Apartament i gjerë, ideal për grupe miqsh.&#x27;,
+    amenities: [&#x27;wifi&#x27;, &#x27;ac&#x27;, &#x27;parking&#x27;, &#x27;kuzhine&#x27;, &#x27;lavatrice&#x27;, &#x27;tv&#x27;], guests: 5,
+  },
+  {
+    id: &#x27;demo-dr-4&#x27;, demo: <span class="tk-kw">true</span>, city: &#x27;durres&#x27;, neighborhood: &#x27;Shkëmbi i Kavajës&#x27;,
+    type: &#x27;1+1&#x27;, bedrooms: 1, price: 2500, phone: <span class="tk-kw">null</span>,
+    title: &#x27;1+1 ekonomik te Shkëmbi i Kavajës&#x27;,
+    description: &#x27;Çmimi më i mirë buzë detit! Apartament i thjeshtë e i pastër, 5 minuta nga plazhi i Shkëmbit të Kavajës. Perfekt për pushime me buxhet.&#x27;,
+    amenities: [&#x27;wifi&#x27;, &#x27;kuzhine&#x27;, &#x27;ballkon&#x27;, &#x27;tv&#x27;], guests: 3,
+  },
+  <span class="tk-cmt">// ——— ELBASAN ———</span>
+  {
+    id: &#x27;demo-el-1&#x27;, demo: <span class="tk-kw">true</span>, city: &#x27;elbasan&#x27;, neighborhood: &#x27;Qendër&#x27;,
+    type: &#x27;1+1&#x27;, bedrooms: 1, price: 3000, phone: <span class="tk-kw">null</span>,
+    title: &#x27;Apartament 1+1 në qendër të Elbasanit&#x27;,
+    description: &#x27;Në zemër të qytetit të kalasë — pranë Rrapit të Bezistanit dhe restoranteve tradicionale. I qetë, i pastër, me mikpritje elbasanase.&#x27;,
+    amenities: [&#x27;wifi&#x27;, &#x27;ac&#x27;, &#x27;kuzhine&#x27;, &#x27;tv&#x27;], guests: 3,
+  },
+  {
+    id: &#x27;demo-el-2&#x27;, demo: <span class="tk-kw">true</span>, city: &#x27;elbasan&#x27;, neighborhood: &#x27;Lagja Partizani&#x27;,
+    type: &#x27;garsoniere&#x27;, bedrooms: 1, price: 1500, phone: <span class="tk-kw">null</span>,
+    title: &#x27;Garsoniere 1500 lekë — çmimi më i ulët&#x27;,
+    description: &#x27;Po, e lexove mirë: 1500 lekë nata! Garsoniere e thjeshtë por e rregullt, për udhëtarë që kalojnë ose studentë. Elbasani të pret lirë.&#x27;,
+    amenities: [&#x27;wifi&#x27;, &#x27;tv&#x27;], guests: 2,
+  },
+  {
+    id: &#x27;demo-el-3&#x27;, demo: <span class="tk-kw">true</span>, city: &#x27;elbasan&#x27;, neighborhood: &#x27;Rruga e Re&#x27;,
+    type: &#x27;2+1&#x27;, bedrooms: 2, price: 4500, phone: <span class="tk-kw">null</span>,
+    title: &#x27;Shtëpi 2+1 me oborr në Elbasan&#x27;,
+    description: &#x27;Për familje që duan hapësirë: shtëpi me oborr të gjelbër, ku fëmijët luajnë të sigurt. Mëngjesi nën hijen e fikut — përvojë elbasanase e vërtetë.&#x27;,
+    amenities: [&#x27;wifi&#x27;, &#x27;parking&#x27;, &#x27;kuzhine&#x27;, &#x27;lavatrice&#x27;, &#x27;ballkon&#x27;, &#x27;tv&#x27;], guests: 6,
+  },
+  {
+    id: &#x27;demo-el-4&#x27;, demo: <span class="tk-kw">true</span>, city: &#x27;elbasan&#x27;, neighborhood: &#x27;Kala&#x27;,
+    type: &#x27;1+1&#x27;, bedrooms: 1, price: 3500, phone: <span class="tk-kw">null</span>,
+    title: &#x27;Apartament brenda Kalasë së Elbasanit&#x27;,
+    description: &#x27;Fli brenda mureve 2000-vjeçare! Apartament me karakter në lagjen Kala, mes gurëve të historisë. Përvojë që s’e gjen askund tjetër.&#x27;,
+    amenities: [&#x27;wifi&#x27;, &#x27;ac&#x27;, &#x27;kuzhine&#x27;, &#x27;tv&#x27;], guests: 3,
+  },
+];
+
+export <span class="tk-kw">const</span> cityName = (id) =&gt; (CITIES.find((c) =&gt; c.id === id) || {}).name || id;
+export <span class="tk-kw">const</span> amenityLabel = (id) =&gt; (AMENITIES.find((a) =&gt; a.id === id) || {}).label || id;
+export <span class="tk-kw">const</span> typeLabel = (id) =&gt; (TYPES.find((t) =&gt; t.id === id) || {}).label || id;
+</code></pre></div></div>
+<div class="codepane" id="pane-f3"><div class="codebox"><button class="copybtn">Kopjo</button><pre><code><span class="tk-cmt">/* ShpiDitore — sistemi i dizajnit: mikpritje mesdhetare e ngrohtë */</span>
+:root {
+  --cream: <span class="tk-str">#FAF5EC</span>;
+  --cream-<span class="tk-num">2</span>: <span class="tk-str">#F3EAD8</span>;
+  --terra: <span class="tk-str">#C0563A</span>;
+  --terra-dark: <span class="tk-str">#A3442C</span>;
+  --terra-soft: <span class="tk-str">#F6E3D8</span>;
+  --pine: <span class="tk-str">#173F3A</span>;
+  --pine-soft: <span class="tk-str">#E3EDEB</span>;
+  --ink: <span class="tk-str">#26201A</span>;
+  --ink-soft: <span class="tk-str">#6B5F52</span>;
+  --white: <span class="tk-str">#FFFFFF</span>;
+  --gold: <span class="tk-str">#E8A33D</span>;
+  --radius: <span class="tk-num">18px</span>;
+  --shadow: <span class="tk-num">0</span> <span class="tk-num">6px</span> <span class="tk-num">24px</span> rgba(<span class="tk-num">38</span>, <span class="tk-num">32</span>, <span class="tk-num">26</span>, <span class="tk-num">0.08</span>);
+  --shadow-lg: <span class="tk-num">0</span> <span class="tk-num">14px</span> <span class="tk-num">40px</span> rgba(<span class="tk-num">38</span>, <span class="tk-num">32</span>, <span class="tk-num">26</span>, <span class="tk-num">0.12</span>);
+  --font-display: <span class="tk-str">&quot;Fraunces&quot;</span>, Georgia, <span class="tk-str">&quot;Times New Roman&quot;</span>, serif;
+  --font-body: <span class="tk-str">&quot;Inter&quot;</span>, -apple-system, <span class="tk-str">&quot;Segoe UI&quot;</span>, Roboto, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: <span class="tk-num">100</span>%; }
+body {
+  margin: <span class="tk-num">0</span>;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: <span class="tk-num">16px</span>;
+  line-height: <span class="tk-num">1.55</span>;
+}
+h1, h2, h3 { font-family: var(--font-display); line-height: <span class="tk-num">1.15</span>; margin: <span class="tk-num">0</span> <span class="tk-num">0</span> <span class="tk-num">0.5em</span>; color: var(--pine); }
+a { color: var(--terra); }
+img, svg { max-width: <span class="tk-num">100</span>%; }
+
+.wrap { max-width: <span class="tk-num">1100px</span>; margin: <span class="tk-num">0</span> auto; padding: <span class="tk-num">0</span> <span class="tk-num">18px</span>; min-width: <span class="tk-num">0</span>; }
+
+<span class="tk-cmt">/* ——— Header ——— */</span>
+.header {
+  position: sticky; top: <span class="tk-num">0</span>; z-index: <span class="tk-num">50</span>;
+  background: rgba(<span class="tk-num">250</span>, <span class="tk-num">245</span>, <span class="tk-num">236</span>, <span class="tk-num">0.94</span>);
+  backdrop-filter: blur(<span class="tk-num">8px</span>);
+  border-bottom: <span class="tk-num">1px</span> solid rgba(<span class="tk-num">192</span>, <span class="tk-num">86</span>, <span class="tk-num">58</span>, <span class="tk-num">0.18</span>);
+}
+.header-in { display: flex; align-items: center; gap: <span class="tk-num">14px</span>; padding: <span class="tk-num">12px</span> <span class="tk-num">18px</span>; max-width: <span class="tk-num">1100px</span>; margin: <span class="tk-num">0</span> auto; min-width: <span class="tk-num">0</span>; }
+.logo { display: flex; align-items: center; gap: <span class="tk-num">10px</span>; text-decoration: none; color: var(--pine); font-family: var(--font-display); font-weight: <span class="tk-num">900</span>; font-size: <span class="tk-num">1.45rem</span>; }
+.logo-badge { width: <span class="tk-num">38px</span>; height: <span class="tk-num">38px</span>; border-radius: <span class="tk-num">12px</span>; background: var(--terra); display: grid; place-items: center; color: var(--cream); font-size: <span class="tk-num">1.3rem</span>; flex: none; }
+.logo small { display: block; font-family: var(--font-body); font-weight: <span class="tk-num">600</span>; font-size: <span class="tk-num">0.68rem</span>; color: var(--ink-soft); letter-spacing: <span class="tk-num">0.02em</span>; }
+.nav { margin-left: auto; display: flex; gap: <span class="tk-num">4px</span>; align-items: center; min-width: <span class="tk-num">0</span>; }
+.nav a { text-decoration: none; color: var(--ink); font-weight: <span class="tk-num">600</span>; font-size: <span class="tk-num">0.92rem</span>; padding: <span class="tk-num">9px</span> <span class="tk-num">12px</span>; border-radius: <span class="tk-num">12px</span>; white-space: nowrap; }
+.nav a:hover { background: var(--cream-<span class="tk-num">2</span>); }
+.nav a.cta { background: var(--terra); color: <span class="tk-str">#fff</span>; }
+.nav a.cta:hover { background: var(--terra-dark); }
+<span class="tk-at">@media</span> (max-width: <span class="tk-num">640px</span>) {
+  .nav a:not(.cta) { display: none; }
+  .nav a.cta { font-size: <span class="tk-num">0.85rem</span>; padding: <span class="tk-num">9px</span> <span class="tk-num">10px</span>; }
+  .nav a.cta .cta-extra { display: none; }
+  .logo { font-size: <span class="tk-num">1.2rem</span>; }
+  .logo small { display: none; }
+  .logo-badge { width: <span class="tk-num">34px</span>; height: <span class="tk-num">34px</span>; }
+  .header-in { gap: <span class="tk-num">10px</span>; padding: <span class="tk-num">10px</span> <span class="tk-num">14px</span>; }
+}
+
+<span class="tk-cmt">/* ——— Hero ——— */</span>
+.hero { background: linear-gradient(<span class="tk-num">180deg</span>, var(--cream) <span class="tk-num">0</span>%, var(--cream-<span class="tk-num">2</span>) <span class="tk-num">100</span>%); overflow: hidden; }
+.hero-in { display: grid; grid-template-columns: <span class="tk-num">1.1fr</span> <span class="tk-num">0.9fr</span>; gap: <span class="tk-num">28px</span>; align-items: center; padding: <span class="tk-num">46px</span> <span class="tk-num">18px</span> <span class="tk-num">40px</span>; max-width: <span class="tk-num">1100px</span>; margin: <span class="tk-num">0</span> auto; min-width: <span class="tk-num">0</span>; }
+.hero-kicker { display: inline-block; background: var(--pine); color: <span class="tk-str">#fff</span>; font-size: <span class="tk-num">0.78rem</span>; font-weight: <span class="tk-num">700</span>; letter-spacing: <span class="tk-num">0.06em</span>; text-transform: uppercase; padding: <span class="tk-num">7px</span> <span class="tk-num">14px</span>; border-radius: <span class="tk-num">999px</span>; margin-bottom: <span class="tk-num">14px</span>; }
+.hero h1 { font-size: clamp(<span class="tk-num">2.1rem</span>, <span class="tk-num">5.4vw</span>, <span class="tk-num">3.4rem</span>); font-weight: <span class="tk-num">900</span>; margin: <span class="tk-num">0</span> <span class="tk-num">0</span> <span class="tk-num">12px</span>; }
+.hero h1 em { font-style: normal; color: var(--terra); }
+.hero p.lead { font-size: <span class="tk-num">1.08rem</span>; color: var(--ink-soft); max-width: <span class="tk-num">34em</span>; margin: <span class="tk-num">0</span> <span class="tk-num">0</span> <span class="tk-num">22px</span>; }
+.hero-cta { display: flex; gap: <span class="tk-num">12px</span>; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: <span class="tk-num">8px</span>; border: <span class="tk-num">0</span>; cursor: pointer; text-decoration: none; font-weight: <span class="tk-num">700</span>; font-size: <span class="tk-num">1rem</span>; padding: <span class="tk-num">14px</span> <span class="tk-num">24px</span>; border-radius: <span class="tk-num">16px</span>; transition: transform <span class="tk-num">0.12s</span> ease, background <span class="tk-num">0.15s</span> ease; font-family: var(--font-body); }
+.btn:active { transform: scale(<span class="tk-num">0.97</span>); }
+.btn-primary { background: var(--terra); color: <span class="tk-str">#fff</span>; box-shadow: <span class="tk-num">0</span> <span class="tk-num">8px</span> <span class="tk-num">20px</span> rgba(<span class="tk-num">192</span>, <span class="tk-num">86</span>, <span class="tk-num">58</span>, <span class="tk-num">0.32</span>); }
+.btn-primary:hover { background: var(--terra-dark); }
+.btn-ghost { background: var(--white); color: var(--pine); border: <span class="tk-num">2px</span> solid var(--pine); }
+.btn-ghost:hover { background: var(--pine-soft); }
+.hero-stats { display: flex; gap: <span class="tk-num">26px</span>; margin-top: <span class="tk-num">26px</span>; flex-wrap: wrap; }
+.hero-stats div b { display: block; font-family: var(--font-display); font-size: <span class="tk-num">1.6rem</span>; color: var(--pine); }
+.hero-stats div span { font-size: <span class="tk-num">0.85rem</span>; color: var(--ink-soft); }
+.hero-art { min-width: <span class="tk-num">0</span>; }
+<span class="tk-at">@media</span> (max-width: <span class="tk-num">760px</span>) {
+  .hero-in { grid-template-columns: <span class="tk-num">1fr</span>; padding-top: <span class="tk-num">32px</span>; }
+  .hero-art { order: -<span class="tk-num">1</span>; max-width: <span class="tk-num">340px</span>; margin: <span class="tk-num">0</span> auto; }
+}
+
+<span class="tk-cmt">/* ——— Search bar ——— */</span>
+.searchbar { background: var(--white); border-radius: <span class="tk-num">20px</span>; box-shadow: var(--shadow-lg); padding: <span class="tk-num">16px</span>; display: grid; grid-template-columns: <span class="tk-num">1fr</span> <span class="tk-num">1fr</span> auto; gap: <span class="tk-num">12px</span>; margin-top: <span class="tk-num">26px</span>; }
+.searchbar label { display: block; font-size: <span class="tk-num">0.78rem</span>; font-weight: <span class="tk-num">700</span>; color: var(--ink-soft); text-transform: uppercase; letter-spacing: <span class="tk-num">0.05em</span>; margin-bottom: <span class="tk-num">6px</span>; }
+.searchbar select, .searchbar input { width: <span class="tk-num">100</span>%; font: inherit; padding: <span class="tk-num">11px</span> <span class="tk-num">12px</span>; border-radius: <span class="tk-num">12px</span>; border: <span class="tk-num">2px</span> solid var(--cream-<span class="tk-num">2</span>); background: var(--cream); color: var(--ink); }
+.searchbar select:focus, .searchbar input:focus { outline: none; border-color: var(--terra); }
+<span class="tk-at">@media</span> (max-width: <span class="tk-num">640px</span>) { .searchbar { grid-template-columns: <span class="tk-num">1fr</span>; } .searchbar .btn { width: <span class="tk-num">100</span>%; justify-content: center; } }
+
+<span class="tk-cmt">/* ——— Sections ——— */</span>
+.section { padding: <span class="tk-num">52px</span> <span class="tk-num">0</span>; }
+.section-head { display: flex; align-items: baseline; justify-content: space-between; gap: <span class="tk-num">12px</span>; margin-bottom: <span class="tk-num">22px</span>; flex-wrap: wrap; }
+.section-head h2 { font-size: clamp(<span class="tk-num">1.5rem</span>, <span class="tk-num">3.4vw</span>, <span class="tk-num">2.1rem</span>); font-weight: <span class="tk-num">700</span>; margin: <span class="tk-num">0</span>; }
+.section-head p { color: var(--ink-soft); margin: <span class="tk-num">4px</span> <span class="tk-num">0</span> <span class="tk-num">0</span>; }
+.link-more { font-weight: <span class="tk-num">700</span>; text-decoration: none; white-space: nowrap; }
+
+<span class="tk-cmt">/* ——— City cards ——— */</span>
+.city-grid { display: grid; grid-template-columns: repeat(<span class="tk-num">3</span>, <span class="tk-num">1fr</span>); gap: <span class="tk-num">18px</span>; min-width: <span class="tk-num">0</span>; }
+.city-card { position: relative; display: block; text-decoration: none; color: var(--ink); background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform <span class="tk-num">0.15s</span> ease, box-shadow <span class="tk-num">0.15s</span> ease; min-width: <span class="tk-num">0</span>; }
+.city-card:hover { transform: translateY(-<span class="tk-num">4px</span>); box-shadow: var(--shadow-lg); }
+.city-card .art { height: <span class="tk-num">150px</span>; display: grid; place-items: center; font-size: <span class="tk-num">3.4rem</span>; }
+.city-card.tirane .art { background: linear-gradient(<span class="tk-num">135deg</span>, <span class="tk-str">#F6D9A8</span>, <span class="tk-str">#EFAE6B</span>); }
+.city-card.durres .art { background: linear-gradient(<span class="tk-num">135deg</span>, <span class="tk-str">#BEE3DC</span>, <span class="tk-str">#7FC4B8</span>); }
+.city-card.elbasan .art { background: linear-gradient(<span class="tk-num">135deg</span>, <span class="tk-str">#EBC9B4</span>, <span class="tk-str">#D99A6C</span>); }
+.city-card .body { padding: <span class="tk-num">16px</span> <span class="tk-num">18px</span> <span class="tk-num">18px</span>; }
+.city-card h3 { margin: <span class="tk-num">0</span> <span class="tk-num">0</span> <span class="tk-num">4px</span>; font-size: <span class="tk-num">1.3rem</span>; }
+.city-card p { margin: <span class="tk-num">0</span> <span class="tk-num">0</span> <span class="tk-num">10px</span>; color: var(--ink-soft); font-size: <span class="tk-num">0.92rem</span>; }
+.city-card .count { font-weight: <span class="tk-num">700</span>; color: var(--terra); font-size: <span class="tk-num">0.9rem</span>; }
+<span class="tk-at">@media</span> (max-width: <span class="tk-num">640px</span>) { .city-grid { grid-template-columns: <span class="tk-num">1fr</span>; } .city-card { display: grid; grid-template-columns: <span class="tk-num">110px</span> <span class="tk-num">1fr</span>; } .city-card .art { height: auto; font-size: <span class="tk-num">2.4rem</span>; } }
+
+<span class="tk-cmt">/* ——— Listing cards ——— */</span>
+.listing-grid { display: grid; grid-template-columns: repeat(<span class="tk-num">3</span>, <span class="tk-num">1fr</span>); gap: <span class="tk-num">18px</span>; min-width: <span class="tk-num">0</span>; }
+<span class="tk-at">@media</span> (max-width: <span class="tk-num">900px</span>) { .listing-grid { grid-template-columns: repeat(<span class="tk-num">2</span>, <span class="tk-num">1fr</span>); } }
+<span class="tk-at">@media</span> (max-width: <span class="tk-num">600px</span>) { .listing-grid { grid-template-columns: <span class="tk-num">1fr</span>; } }
+.card { display: flex; flex-direction: column; background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); text-decoration: none; color: var(--ink); transition: transform <span class="tk-num">0.15s</span> ease, box-shadow <span class="tk-num">0.15s</span> ease; min-width: <span class="tk-num">0</span>; }
+.card:hover { transform: translateY(-<span class="tk-num">4px</span>); box-shadow: var(--shadow-lg); }
+.card .thumb { position: relative; height: <span class="tk-num">170px</span>; flex: none; }
+.card .thumb svg { display: block; width: <span class="tk-num">100</span>%; height: <span class="tk-num">100</span>%; }
+.demo-ribbon { position: absolute; top: <span class="tk-num">10px</span>; left: <span class="tk-num">10px</span>; background: var(--pine); color: <span class="tk-str">#fff</span>; font-size: <span class="tk-num">0.68rem</span>; font-weight: <span class="tk-num">800</span>; letter-spacing: <span class="tk-num">0.08em</span>; padding: <span class="tk-num">5px</span> <span class="tk-num">10px</span>; border-radius: <span class="tk-num">999px</span>; }
+.card .body { padding: <span class="tk-num">16px</span> <span class="tk-num">18px</span> <span class="tk-num">18px</span>; display: flex; flex-direction: column; gap: <span class="tk-num">8px</span>; flex: <span class="tk-num">1</span>; min-width: <span class="tk-num">0</span>; }
+.card .loc { font-size: <span class="tk-num">0.82rem</span>; font-weight: <span class="tk-num">700</span>; color: var(--terra); text-transform: uppercase; letter-spacing: <span class="tk-num">0.05em</span>; }
+.card h3 { font-size: <span class="tk-num">1.12rem</span>; margin: <span class="tk-num">0</span>; font-weight: <span class="tk-num">700</span>; }
+.card .meta { font-size: <span class="tk-num">0.88rem</span>; color: var(--ink-soft); }
+.card .price-row { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: <span class="tk-num">8px</span>; padding-top: <span class="tk-num">8px</span>; border-top: <span class="tk-num">1px</span> dashed var(--cream-<span class="tk-num">2</span>); }
+.price { font-family: var(--font-display); font-weight: <span class="tk-num">900</span>; font-size: <span class="tk-num">1.55rem</span>; color: var(--pine); }
+.price small { font-family: var(--font-body); font-weight: <span class="tk-num">600</span>; font-size: <span class="tk-num">0.8rem</span>; color: var(--ink-soft); }
+.amen-chips { display: flex; flex-wrap: wrap; gap: <span class="tk-num">6px</span>; }
+.chip { background: var(--pine-soft); color: var(--pine); font-size: <span class="tk-num">0.76rem</span>; font-weight: <span class="tk-num">600</span>; padding: <span class="tk-num">4px</span> <span class="tk-num">10px</span>; border-radius: <span class="tk-num">999px</span>; }
+
+<span class="tk-cmt">/* ——— How it works ——— */</span>
+.steps { display: grid; grid-template-columns: repeat(<span class="tk-num">3</span>, <span class="tk-num">1fr</span>); gap: <span class="tk-num">18px</span>; min-width: <span class="tk-num">0</span>; }
+.step { background: var(--white); border-radius: var(--radius); padding: <span class="tk-num">24px</span> <span class="tk-num">20px</span>; box-shadow: var(--shadow); min-width: <span class="tk-num">0</span>; }
+.step .n { width: <span class="tk-num">44px</span>; height: <span class="tk-num">44px</span>; border-radius: <span class="tk-num">50</span>%; background: var(--terra); color: <span class="tk-str">#fff</span>; display: grid; place-items: center; font-family: var(--font-display); font-weight: <span class="tk-num">900</span>; font-size: <span class="tk-num">1.3rem</span>; margin-bottom: <span class="tk-num">12px</span>; }
+.step h3 { font-size: <span class="tk-num">1.15rem</span>; margin: <span class="tk-num">0</span> <span class="tk-num">0</span> <span class="tk-num">6px</span>; }
+.step p { margin: <span class="tk-num">0</span>; color: var(--ink-soft); font-size: <span class="tk-num">0.94rem</span>; }
+<span class="tk-at">@media</span> (max-width: <span class="tk-num">700px</span>) { .steps { grid-template-columns: <span class="tk-num">1fr</span>; } }
+
+<span class="tk-cmt">/* ——— CTA band ——— */</span>
+.cta-band { background: var(--pine); border-radius: <span class="tk-num">26px</span>; padding: <span class="tk-num">44px</span> <span class="tk-num">34px</span>; text-align: center; color: <span class="tk-str">#fff</span>; box-shadow: var(--shadow-lg); }
+.cta-band h2 { color: <span class="tk-str">#fff</span>; font-size: clamp(<span class="tk-num">1.6rem</span>, <span class="tk-num">3.6vw</span>, <span class="tk-num">2.3rem</span>); margin: <span class="tk-num">0</span> <span class="tk-num">0</span> <span class="tk-num">10px</span>; }
+.cta-band p { color: rgba(<span class="tk-num">255</span>,<span class="tk-num">255</span>,<span class="tk-num">255</span>,<span class="tk-num">0.82</span>); max-width: <span class="tk-num">36em</span>; margin: <span class="tk-num">0</span> auto <span class="tk-num">24px</span>; }
+
+<span class="tk-cmt">/* ——— Filters ——— */</span>
+.filters { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); padding: <span class="tk-num">20px</span>; display: grid; grid-template-columns: repeat(<span class="tk-num">4</span>, <span class="tk-num">1fr</span>); gap: <span class="tk-num">16px</span>; margin-bottom: <span class="tk-num">24px</span>; min-width: <span class="tk-num">0</span>; }
+.filters label.fl { display: block; font-size: <span class="tk-num">0.76rem</span>; font-weight: <span class="tk-num">700</span>; text-transform: uppercase; letter-spacing: <span class="tk-num">0.05em</span>; color: var(--ink-soft); margin-bottom: <span class="tk-num">8px</span>; }
+.filters select, .filters input[type=<span class="tk-str">&quot;text&quot;</span>] { width: <span class="tk-num">100</span>%; font: inherit; padding: <span class="tk-num">10px</span> <span class="tk-num">12px</span>; border-radius: <span class="tk-num">12px</span>; border: <span class="tk-num">2px</span> solid var(--cream-<span class="tk-num">2</span>); background: var(--cream); color: var(--ink); }
+.filters select:focus, .filters input[type=<span class="tk-str">&quot;text&quot;</span>]:focus { outline: none; border-color: var(--terra); }
+.range-val { font-weight: <span class="tk-num">800</span>; color: var(--terra); font-size: <span class="tk-num">1.05rem</span>; }
+input[type=<span class="tk-str">&quot;range&quot;</span>] { width: <span class="tk-num">100</span>%; accent-color: var(--terra); }
+.amen-filter { display: flex; flex-wrap: wrap; gap: <span class="tk-num">8px</span>; }
+.amen-filter button { border: <span class="tk-num">2px</span> solid var(--cream-<span class="tk-num">2</span>); background: var(--cream); border-radius: <span class="tk-num">999px</span>; padding: <span class="tk-num">7px</span> <span class="tk-num">13px</span>; font: inherit; font-size: <span class="tk-num">0.85rem</span>; font-weight: <span class="tk-num">600</span>; cursor: pointer; color: var(--ink); }
+.amen-filter button[aria-pressed=<span class="tk-str">&quot;true&quot;</span>] { background: var(--pine); border-color: var(--pine); color: <span class="tk-str">#fff</span>; }
+.filters .full { grid-column: <span class="tk-num">1</span> / -<span class="tk-num">1</span>; }
+<span class="tk-at">@media</span> (max-width: <span class="tk-num">860px</span>) { .filters { grid-template-columns: <span class="tk-num">1fr</span> <span class="tk-num">1fr</span>; } }
+<span class="tk-at">@media</span> (max-width: <span class="tk-num">520px</span>) { .filters { grid-template-columns: <span class="tk-num">1fr</span>; } }
+.result-count { color: var(--ink-soft); font-size: <span class="tk-num">0.92rem</span>; margin-bottom: <span class="tk-num">14px</span>; }
+.empty { text-align: center; padding: <span class="tk-num">60px</span> <span class="tk-num">20px</span>; background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); color: var(--ink-soft); }
+
+<span class="tk-cmt">/* ——— Detail page ——— */</span>
+.detail { display: grid; grid-template-columns: <span class="tk-num">1.15fr</span> <span class="tk-num">0.85fr</span>; gap: <span class="tk-num">26px</span>; align-items: start; min-width: <span class="tk-num">0</span>; }
+<span class="tk-at">@media</span> (max-width: <span class="tk-num">820px</span>) { .detail { grid-template-columns: <span class="tk-num">1fr</span>; } }
+.gallery { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); background: var(--white); min-width: <span class="tk-num">0</span>; }
+.gallery .main { height: <span class="tk-num">340px</span>; }
+.gallery .main svg { width: <span class="tk-num">100</span>%; height: <span class="tk-num">100</span>%; display: block; }
+.gallery .thumbs { display: grid; grid-template-columns: repeat(<span class="tk-num">3</span>, <span class="tk-num">1fr</span>); gap: <span class="tk-num">8px</span>; padding: <span class="tk-num">10px</span>; }
+.gallery .thumbs button { border: <span class="tk-num">3px</span> solid transparent; border-radius: <span class="tk-num">12px</span>; overflow: hidden; padding: <span class="tk-num">0</span>; cursor: pointer; background: none; height: <span class="tk-num">84px</span>; }
+.gallery .thumbs button[aria-selected=<span class="tk-str">&quot;true&quot;</span>] { border-color: var(--terra); }
+.gallery .thumbs svg { width: <span class="tk-num">100</span>%; height: <span class="tk-num">100</span>%; display: block; }
+.detail-side { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); padding: <span class="tk-num">26px</span>; min-width: <span class="tk-num">0</span>; position: sticky; top: <span class="tk-num">76px</span>; }
+<span class="tk-at">@media</span> (max-width: <span class="tk-num">820px</span>) { .detail-side { position: static; } }
+.detail-side .loc { font-size: <span class="tk-num">0.85rem</span>; font-weight: <span class="tk-num">700</span>; color: var(--terra); text-transform: uppercase; letter-spacing: <span class="tk-num">0.05em</span>; }
+.detail-side h1 { font-size: <span class="tk-num">1.7rem</span>; margin: <span class="tk-num">6px</span> <span class="tk-num">0</span> <span class="tk-num">10px</span>; }
+.detail-side .price { font-size: <span class="tk-num">2.2rem</span>; }
+.book-box { background: var(--cream); border-radius: <span class="tk-num">14px</span>; padding: <span class="tk-num">18px</span>; margin: <span class="tk-num">18px</span> <span class="tk-num">0</span>; }
+.book-box .row { display: flex; gap: <span class="tk-num">10px</span>; margin-top: <span class="tk-num">12px</span>; }
+.book-box .row .btn { flex: <span class="tk-num">1</span>; justify-content: center; padding: <span class="tk-num">13px</span> <span class="tk-num">10px</span>; font-size: <span class="tk-num">0.95rem</span>; }
+.btn-wa { background: <span class="tk-str">#1FA855</span>; color: <span class="tk-str">#fff</span>; }
+.btn-wa:hover { background: <span class="tk-str">#188a45</span>; }
+.btn-call { background: var(--pine); color: <span class="tk-str">#fff</span>; }
+.btn-call:hover { background: <span class="tk-str">#0f2c28</span>; }
+.demo-note { background: var(--terra-soft); border: <span class="tk-num">1px</span> dashed var(--terra); border-radius: <span class="tk-num">12px</span>; padding: <span class="tk-num">14px</span> <span class="tk-num">16px</span>; font-size: <span class="tk-num">0.92rem</span>; color: var(--ink); }
+.detail-main h2 { font-size: <span class="tk-num">1.35rem</span>; margin: <span class="tk-num">26px</span> <span class="tk-num">0</span> <span class="tk-num">10px</span>; }
+.detail-main p { color: var(--ink); }
+.fact-grid { display: grid; grid-template-columns: <span class="tk-num">1fr</span> <span class="tk-num">1fr</span>; gap: <span class="tk-num">10px</span>; margin-top: <span class="tk-num">12px</span>; }
+.fact { background: var(--white); border-radius: <span class="tk-num">12px</span>; padding: <span class="tk-num">12px</span> <span class="tk-num">14px</span>; box-shadow: var(--shadow); font-size: <span class="tk-num">0.92rem</span>; }
+.fact b { display: block; font-size: <span class="tk-num">0.76rem</span>; text-transform: uppercase; letter-spacing: <span class="tk-num">0.05em</span>; color: var(--ink-soft); margin-bottom: <span class="tk-num">2px</span>; }
+.breadcrumb { font-size: <span class="tk-num">0.88rem</span>; color: var(--ink-soft); margin: <span class="tk-num">18px</span> <span class="tk-num">0</span> <span class="tk-num">14px</span>; }
+.breadcrumb a { color: var(--terra); text-decoration: none; font-weight: <span class="tk-num">600</span>; }
+
+<span class="tk-cmt">/* ——— Form ——— */</span>
+.form-card { background: var(--white); border-radius: <span class="tk-num">22px</span>; box-shadow: var(--shadow-lg); padding: <span class="tk-num">30px</span>; max-width: <span class="tk-num">680px</span>; margin: <span class="tk-num">0</span> auto; min-width: <span class="tk-num">0</span>; }
+.form-grid { display: grid; grid-template-columns: <span class="tk-num">1fr</span> <span class="tk-num">1fr</span>; gap: <span class="tk-num">16px</span>; min-width: <span class="tk-num">0</span>; }
+.form-grid .full { grid-column: <span class="tk-num">1</span> / -<span class="tk-num">1</span>; }
+.field label { display: block; font-weight: <span class="tk-num">700</span>; font-size: <span class="tk-num">0.9rem</span>; margin-bottom: <span class="tk-num">6px</span>; }
+.field label .req { color: var(--terra); }
+.field input, .field select, .field textarea { width: <span class="tk-num">100</span>%; font: inherit; padding: <span class="tk-num">12px</span> <span class="tk-num">14px</span>; border-radius: <span class="tk-num">12px</span>; border: <span class="tk-num">2px</span> solid var(--cream-<span class="tk-num">2</span>); background: var(--cream); color: var(--ink); }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--terra); }
+.field input[aria-invalid=<span class="tk-str">&quot;true&quot;</span>], .field select[aria-invalid=<span class="tk-str">&quot;true&quot;</span>], .field textarea[aria-invalid=<span class="tk-str">&quot;true&quot;</span>] { border-color: <span class="tk-str">#C0392B</span>; background: <span class="tk-str">#FDF0EC</span>; }
+.field .hint { font-size: <span class="tk-num">0.8rem</span>; color: var(--ink-soft); margin-top: <span class="tk-num">4px</span>; }
+.field .err { font-size: <span class="tk-num">0.82rem</span>; color: <span class="tk-str">#C0392B</span>; font-weight: <span class="tk-num">600</span>; margin-top: <span class="tk-num">4px</span>; }
+.checks { display: flex; flex-wrap: wrap; gap: <span class="tk-num">8px</span>; }
+.checks label { display: inline-flex; align-items: center; gap: <span class="tk-num">7px</span>; border: <span class="tk-num">2px</span> solid var(--cream-<span class="tk-num">2</span>); border-radius: <span class="tk-num">999px</span>; padding: <span class="tk-num">8px</span> <span class="tk-num">14px</span>; font-size: <span class="tk-num">0.88rem</span>; font-weight: <span class="tk-num">600</span>; cursor: pointer; background: var(--cream); }
+.checks input { accent-color: var(--terra); width: <span class="tk-num">16px</span>; height: <span class="tk-num">16px</span>; }
+.price-cap { background: var(--terra-soft); border-radius: <span class="tk-num">12px</span>; padding: <span class="tk-num">12px</span> <span class="tk-num">16px</span>; font-size: <span class="tk-num">0.9rem</span>; }
+.price-cap b { color: var(--terra-dark); }
+.form-ok { text-align: center; padding: <span class="tk-num">40px</span> <span class="tk-num">20px</span>; }
+.form-ok .big { font-size: <span class="tk-num">3.4rem</span>; }
+.form-ok h2 { margin: <span class="tk-num">12px</span> <span class="tk-num">0</span> <span class="tk-num">8px</span>; }
+.hp { position: absolute; left: -<span class="tk-num">9999px</span>; width: <span class="tk-num">1px</span>; height: <span class="tk-num">1px</span>; overflow: hidden; }
+<span class="tk-at">@media</span> (max-width: <span class="tk-num">600px</span>) { .form-grid { grid-template-columns: <span class="tk-num">1fr</span>; } .form-card { padding: <span class="tk-num">22px</span> <span class="tk-num">18px</span>; } }
+
+<span class="tk-cmt">/* ——— Footer ——— */</span>
+.footer { background: var(--pine); color: rgba(<span class="tk-num">255</span>,<span class="tk-num">255</span>,<span class="tk-num">255</span>,<span class="tk-num">0.85</span>); margin-top: <span class="tk-num">60px</span>; }
+.footer-in { max-width: <span class="tk-num">1100px</span>; margin: <span class="tk-num">0</span> auto; padding: <span class="tk-num">40px</span> <span class="tk-num">18px</span> <span class="tk-num">26px</span>; display: grid; grid-template-columns: <span class="tk-num">1.2fr</span> <span class="tk-num">1fr</span> <span class="tk-num">1fr</span>; gap: <span class="tk-num">26px</span>; min-width: <span class="tk-num">0</span>; }
+.footer h4 { color: <span class="tk-str">#fff</span>; font-family: var(--font-display); margin: <span class="tk-num">0</span> <span class="tk-num">0</span> <span class="tk-num">10px</span>; font-size: <span class="tk-num">1.05rem</span>; }
+.footer a { color: rgba(<span class="tk-num">255</span>,<span class="tk-num">255</span>,<span class="tk-num">255</span>,<span class="tk-num">0.85</span>); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+.footer ul { list-style: none; margin: <span class="tk-num">0</span>; padding: <span class="tk-num">0</span>; display: grid; gap: <span class="tk-num">8px</span>; font-size: <span class="tk-num">0.92rem</span>; }
+.footer .brand { font-family: var(--font-display); font-weight: <span class="tk-num">900</span>; font-size: <span class="tk-num">1.4rem</span>; color: <span class="tk-str">#fff</span>; }
+.footer-bottom { border-top: <span class="tk-num">1px</span> solid rgba(<span class="tk-num">255</span>,<span class="tk-num">255</span>,<span class="tk-num">255</span>,<span class="tk-num">0.15</span>); padding: <span class="tk-num">16px</span> <span class="tk-num">18px</span>; text-align: center; font-size: <span class="tk-num">0.85rem</span>; color: rgba(<span class="tk-num">255</span>,<span class="tk-num">255</span>,<span class="tk-num">255</span>,<span class="tk-num">0.65</span>); max-width: <span class="tk-num">1100px</span>; margin: <span class="tk-num">0</span> auto; }
+<span class="tk-at">@media</span> (max-width: <span class="tk-num">700px</span>) { .footer-in { grid-template-columns: <span class="tk-num">1fr</span>; } }
+
+<span class="tk-cmt">/* ——— Misc ——— */</span>
+.page-title { padding: <span class="tk-num">34px</span> <span class="tk-num">0</span> <span class="tk-num">6px</span>; }
+.page-title h1 { font-size: clamp(<span class="tk-num">1.8rem</span>, <span class="tk-num">4.4vw</span>, <span class="tk-num">2.6rem</span>); margin: <span class="tk-num">0</span> <span class="tk-num">0</span> <span class="tk-num">6px</span>; }
+.page-title p { color: var(--ink-soft); margin: <span class="tk-num">0</span>; }
+.badge-cap { display: inline-block; background: var(--terra-soft); color: var(--terra-dark); font-weight: <span class="tk-num">800</span>; font-size: <span class="tk-num">0.85rem</span>; padding: <span class="tk-num">6px</span> <span class="tk-num">14px</span>; border-radius: <span class="tk-num">999px</span>; margin-bottom: <span class="tk-num">10px</span>; }
+.loading { text-align: center; padding: <span class="tk-num">70px</span> <span class="tk-num">20px</span>; color: var(--ink-soft); }
+.spinner { width: <span class="tk-num">40px</span>; height: <span class="tk-num">40px</span>; border: <span class="tk-num">4px</span> solid var(--cream-<span class="tk-num">2</span>); border-top-color: var(--terra); border-radius: <span class="tk-num">50</span>%; margin: <span class="tk-num">0</span> auto <span class="tk-num">14px</span>; animation: spin <span class="tk-num">0.9s</span> linear infinite; }
+<span class="tk-at">@keyframes</span> spin { to { transform: rotate(<span class="tk-num">360deg</span>); } }
+.faq { display: grid; gap: <span class="tk-num">12px</span>; max-width: <span class="tk-num">720px</span>; }
+.faq details { background: var(--white); border-radius: <span class="tk-num">14px</span>; padding: <span class="tk-num">16px</span> <span class="tk-num">20px</span>; box-shadow: var(--shadow); }
+.faq summary { font-weight: <span class="tk-num">700</span>; cursor: pointer; font-size: <span class="tk-num">1.02rem</span>; }
+.faq p { color: var(--ink-soft); margin: <span class="tk-num">10px</span> <span class="tk-num">0</span> <span class="tk-num">0</span>; }
+[hidden] { display: none !important; }
+</code></pre></div></div>
+</section>
+
+<footer>Krijuar nga <strong>Erion Nezha</strong> — © 2026</footer>
+</div>
+<script>
+document.querySelectorAll('.tab').forEach(function(t){
+  t.addEventListener('click',function(){
+    document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('active')});
+    document.querySelectorAll('.codepane').forEach(function(x){x.classList.remove('active')});
+    t.classList.add('active');
+    document.getElementById('pane-'+t.dataset.f).classList.add('active');
+  });
+});
+document.querySelectorAll('.copybtn').forEach(function(b){
+  b.addEventListener('click',function(){
+    var pre=b.parentElement.querySelector('pre');
+    navigator.clipboard.writeText(pre.textContent).then(function(){
+      b.textContent='✓ Kopjuar';setTimeout(function(){b.textContent='Kopjo';},1600);
+    });
+  });
+});
+</script>
+</body>
+</html>
